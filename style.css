@@ -1,0 +1,31 @@
+@property --custom-background{
+    syntax: "<color>";
+    inherits: false;
+    initial-value: #c0ffee,
+}
+
+
+@property --custom-size{
+    syntax: "<percentage>";
+    inherits: true;
+    initial-value: 50%;
+}
+
+
+.container{
+    height: 50vh;
+    --custom-size: 50%;
+    background-color: beige;
+    text-align: center;
+}
+
+.container div{
+    height:  var(--custom-size);
+    width: var(--custom-size);
+    --custom-color: #ccc;
+}
+
+.div1{
+    --custom-color: inherit;
+    container: ;
+}
